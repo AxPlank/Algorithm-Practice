@@ -31,5 +31,3 @@ def mergesort(arr):
     if r == len(right_arr):
         merge_arr += left_arr[l:]
         return merge_arr
-
-print(mergesort(arr))
