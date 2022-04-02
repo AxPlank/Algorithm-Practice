@@ -3,7 +3,6 @@
 """
 
 arr = [5, 11, 14, 3, 1, 9, 4, 6, 7, 2, 12, 10]
-print(len(arr))
 
 def mergesort(arr):
     if len(arr) == 1:
@@ -21,6 +20,7 @@ def mergesort(arr):
     while l < len(left_arr) and r < len(right_arr):
         if left_arr[l] > right_arr[r]:
             merge_arr.append(right_arr[r])
+            r += 1
         else:
             merge_arr.append(left_arr[l])
             l += 1
@@ -31,3 +31,5 @@ def mergesort(arr):
     if r == len(right_arr):
         merge_arr += left_arr[l:]
         return merge_arr
+    
+print(mergesort(arr))
