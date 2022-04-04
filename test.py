@@ -1,9 +1,13 @@
 arr = [5, 9, 4, 3, 1, 9, 4, 6, 7, 2, 12, 10]
 
-start = 0
-end = len(arr)
-def testt(start, end):
-    mid = (start + end) // 2
-    print(arr[mid])
-    
-testt(start, end)
+def x():
+    def xx():
+        arr[0], arr[1] = arr[1], arr[0]
+        
+    xx()
+    arr[0], arr[1] = arr[1], arr[0]
+    print(arr)
+
+x()
+arr[0], arr[1] = arr[1], arr[0]
+print(arr)
