@@ -12,7 +12,8 @@ for i in range(len(arr)):
         
         if arr[u] > arr[d]:
             arr[u], arr[d] = arr[d], arr[u]
-        
+        else:
+            break
         d = u
 
 # 힙 정렬 과정 
@@ -21,7 +22,7 @@ for i in range(len(arr)-1, -1, -1):
     arr[0], arr[i] = arr[i], arr[0]
     
     # 위에서부터 시작해 최소 힙으로 만들기
-    u = d = 0
+    u = d = 0   
     while d < i:
         d = 2 * u + 1
         if d < i - 1 and arr[d] > arr[d+1]:
@@ -29,6 +30,8 @@ for i in range(len(arr)-1, -1, -1):
             
         if d < i and arr[u] > arr[d]:
             arr[u], arr[d] = arr[d], arr[u]
+        else:
+            break
             
         u = d
 
