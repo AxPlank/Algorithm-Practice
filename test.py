@@ -1,4 +1,4 @@
-arr = [1, 3, 4, 12, 14, 12, 12, 4, 5, 7, 8, 9, 9, 10, 2, 6, 9]
+arr_input = [3, 1, 9, 10, 14, 1, 6, 4, 5, 2, 7, 8, 12, 0]
 
 def quick_sort(arr):
     def sort(low, high):
@@ -19,10 +19,9 @@ def quick_sort(arr):
             if low <= high:
                 arr[low], arr[high] = arr[high], arr[low]
                 low, high = low + 1, high - 1
-        print(low)
         return low
 
     sort(0, len(arr) - 1)
 
-quick_sort(arr)
-print(arr)
+quick_sort(arr_input)
+print(arr_input)
